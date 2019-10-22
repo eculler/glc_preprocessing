@@ -1,0 +1,2064 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.0.2-Girona" projectname="">
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>28001</srsid>
+      <srid>5070</srid>
+      <authid>EPSG:5070</authid>
+      <description>NAD83 / Conus Albers</description>
+      <projectionacronym>aea</projectionacronym>
+      <ellipsoidacronym>GRS80</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer id="output_392ea97e_d350_4136_8f89_ea7e373a048c" source="Point?crs=EPSG:4326&amp;field=OBJECTID:integer&amp;field=Shape:string&amp;field=source_name:string&amp;field=source_link:string&amp;field=event_id:integer&amp;field=event_date:string&amp;field=event_time:string&amp;field=event_title:string&amp;field=event_description:string&amp;field=location_description:string&amp;field=location_accuracy:string&amp;field=landslide_category:string&amp;field=landslide_trigger:string&amp;field=landslide_size:string&amp;field=landslide_setting:string&amp;field=fatality_count:integer&amp;field=injury_count:integer&amp;field=storm_name:string&amp;field=photo_link:string&amp;field=comments:string&amp;field=event_import_source:string&amp;field=event_import_id:string&amp;field=latitude:double&amp;field=longitude:double&amp;field=country_name:string&amp;field=country_code:string&amp;field=admin_division_name:string&amp;field=gazetteer_closest_point:string&amp;field=gazetteer_distance:double&amp;field=submitted_date:string&amp;field=last_edited_date:string&amp;uid={27e6f987-886f-402a-88bc-e568fbbef614}" name="390230_glc" expanded="1" checked="Qt::Checked" providerKey="memory">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer id="output_995ab97d_38c5_466a_ad78_3caeaef93521" source="Polygon?crs=EPSG:4326&amp;field=OBJECTID:long(10)&amp;field=Shape:string(254)&amp;field=source_nam:string(254)&amp;field=source_lin:string(254)&amp;field=event_id:long(10)&amp;field=event_date:string(254)&amp;field=event_time:string(254)&amp;field=event_titl:string(254)&amp;field=event_desc:string(254)&amp;field=location_d:string(254)&amp;field=location_a:string(254)&amp;field=landslide_:string(254)&amp;field=landslid_1:string(254)&amp;field=landslid_2:string(254)&amp;field=landslid_3:string(254)&amp;field=fatality_c:long(10)&amp;field=injury_cou:long(10)&amp;field=storm_name:string(254)&amp;field=photo_link:string(254)&amp;field=comments:string(254)&amp;field=event_impo:string(254)&amp;field=event_im_1:string(254)&amp;field=latitude:double(20,5)&amp;field=longitude:double(20,5)&amp;field=country_na:string(254)&amp;field=country_co:string(254)&amp;field=admin_divi:string(254)&amp;field=gazetteer_:string(254)&amp;field=gazettee_1:double(20,5)&amp;field=submitted_:string(254)&amp;field=last_edite:string(254)&amp;uid={312758d7-18ab-44a9-998f-e0113268fb2a}" name="output" expanded="1" checked="Qt::Checked" providerKey="memory">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer id="watersheds_be589650_adec_43fe_b9c2_868b952dd3b0" source="file:///Users/elsaculler/Documents/landslide/regions/data/processed/watersheds.csv?type=csv&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no" name="watersheds" expanded="1" checked="Qt::Checked" providerKey="delimitedtext">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer id="output_0540a085_3700_4a6e_863c_39d20b728d48" source="MultiPolygon?crs=EPSG:5070&amp;field=AREA:double(12,11)&amp;field=PERIMETER:double(12,11)&amp;field=GAGE_ID:string(15)&amp;field=FID_1:long(10)&amp;field=STAID:string(254)&amp;field=STANAME:string(254)&amp;field=CLASS:string(254)&amp;field=AGGECOREGI:string(254)&amp;field=DRAIN_SQKM:double(18,11)&amp;field=HUC02:string(254)&amp;field=LAT_GAGE:double(18,11)&amp;field=LNG_GAGE:double(18,11)&amp;field=STATE:string(254)&amp;field=HCDN_2009:string(254)&amp;field=ACTIVE09:string(254)&amp;field=FLYRS1900:double(18,11)&amp;field=FLYRS1950:double(18,11)&amp;field=FLYRS1990:double(18,11)&amp;field=watersheds_OBJECTID:integer&amp;uid={83d25797-2db4-4955-8dd0-890efcc62d35}" name="390230_huc2" expanded="1" checked="Qt::Checked" providerKey="memory">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>output_392ea97e_d350_4136_8f89_ea7e373a048c</item>
+      <item>watersheds_be589650_adec_43fe_b9c2_868b952dd3b0</item>
+      <item>output_0540a085_3700_4a6e_863c_39d20b728d48</item>
+      <item>output_995ab97d_38c5_466a_ad78_3caeaef93521</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings type="1" tolerance="12" mode="2" enabled="1" intersection-snapping="0" unit="1">
+    <individual-layer-settings>
+      <layer-setting type="1" id="output_0540a085_3700_4a6e_863c_39d20b728d48" tolerance="12" enabled="1" units="1"/>
+      <layer-setting type="1" id="output_995ab97d_38c5_466a_ad78_3caeaef93521" tolerance="12" enabled="1" units="1"/>
+      <layer-setting type="1" id="output_392ea97e_d350_4136_8f89_ea7e373a048c" tolerance="12" enabled="1" units="1"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+    <units>meters</units>
+    <extent>
+      <xmin>-2152624.5</xmin>
+      <ymin>1992132.375</ymin>
+      <xmax>-2042185.5</xmax>
+      <ymax>2083592.625</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>28001</srsid>
+        <srid>5070</srid>
+        <authid>EPSG:5070</authid>
+        <description>NAD83 / Conus Albers</description>
+        <projectionacronym>aea</projectionacronym>
+        <ellipsoidacronym>GRS80</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendlayer showFeatureCount="0" name="390230_glc" open="true" checked="Qt::Checked" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="output_392ea97e_d350_4136_8f89_ea7e373a048c"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" name="output" open="true" checked="Qt::Checked" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="output_995ab97d_38c5_466a_ad78_3caeaef93521"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" name="watersheds" open="true" checked="Qt::Checked" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="watersheds_be589650_adec_43fe_b9c2_868b952dd3b0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" name="390230_huc2" open="true" checked="Qt::Checked" drawingOrder="-1">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" isInOverview="0" layerid="output_0540a085_3700_4a6e_863c_39d20b728d48"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <mapcanvas name="mAreaCanvas" annotationsVisible="1">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas name="mAreaCanvas" annotationsVisible="1">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas name="mAreaCanvas" annotationsVisible="1">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <projectlayers>
+    <maplayer type="vector" labelsEnabled="0" simplifyMaxScale="1" readOnly="0" refreshOnNotifyMessage="" simplifyDrawingTol="1" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" maxScale="0" minScale="1e+8" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" autoRefreshEnabled="0" simplifyDrawingHints="1">
+      <extent>
+        <xmin>-2149995</xmin>
+        <ymin>1994310</ymin>
+        <xmax>-2044815</xmax>
+        <ymax>2081415</ymax>
+      </extent>
+      <id>output_0540a085_3700_4a6e_863c_39d20b728d48</id>
+      <datasource>memory?geometry=MultiPolygon&amp;crs=EPSG:5070&amp;field=AREA:double(12,11)&amp;field=PERIMETER:double(12,11)&amp;field=GAGE_ID:string(15,0)&amp;field=FID_1:int8(10,0)&amp;field=STAID:string(254,0)&amp;field=STANAME:string(254,0)&amp;field=CLASS:string(254,0)&amp;field=AGGECOREGI:string(254,0)&amp;field=DRAIN_SQKM:double(18,11)&amp;field=HUC02:string(254,0)&amp;field=LAT_GAGE:double(18,11)&amp;field=LNG_GAGE:double(18,11)&amp;field=STATE:string(254,0)&amp;field=HCDN_2009:string(254,0)&amp;field=ACTIVE09:string(254,0)&amp;field=FLYRS1900:double(18,11)&amp;field=FLYRS1950:double(18,11)&amp;field=FLYRS1990:double(18,11)&amp;field=watersheds_OBJECTID:integer(-1,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>390230_huc2</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>28001</srsid>
+          <srid>5070</srid>
+          <authid>EPSG:5070</authid>
+          <description>NAD83 / Conus Albers</description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial maxz="0" minx="0" crs="" maxx="0" minz="0" dimensions="2" miny="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" forceraster="0" enableorderby="1" symbollevels="0">
+        <symbols>
+          <symbol type="fill" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" enabled="1" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="156,50,140,58"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+        <orderby>
+          <orderByClause asc="0" nullsFirst="0">"AREA"</orderByClause>
+        </orderby>
+      </renderer-v2>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory lineSizeScale="3x:0,0,0,0,0,0" backgroundAlpha="255" scaleDependency="Area" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" enabled="0" barWidth="5" sizeType="MM" minScaleDenominator="0" penColor="#000000" rotationOffset="270" penAlpha="255" diagramOrientation="Up" height="15" scaleBasedVisibility="0" penWidth="0" labelPlacementMethod="XHeight" maxScaleDenominator="1e+8" minimumSize="0" opacity="1" width="15">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings priority="0" zIndex="0" obstacle="0" showAll="1" placement="0" dist="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" name="name" value=""/>
+            <Option name="properties"/>
+            <Option type="QString" name="type" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="AREA">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="PERIMETER">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GAGE_ID">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="FID_1">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="STAID">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="STANAME">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="CLASS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="AGGECOREGI">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DRAIN_SQKM">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="HUC02">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LAT_GAGE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="LNG_GAGE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="STATE">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="HCDN_2009">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ACTIVE09">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="FLYRS1900">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="FLYRS1950">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="FLYRS1990">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="watersheds_OBJECTID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias name="" field="AREA" index="0"/>
+        <alias name="" field="PERIMETER" index="1"/>
+        <alias name="" field="GAGE_ID" index="2"/>
+        <alias name="" field="FID_1" index="3"/>
+        <alias name="" field="STAID" index="4"/>
+        <alias name="" field="STANAME" index="5"/>
+        <alias name="" field="CLASS" index="6"/>
+        <alias name="" field="AGGECOREGI" index="7"/>
+        <alias name="" field="DRAIN_SQKM" index="8"/>
+        <alias name="" field="HUC02" index="9"/>
+        <alias name="" field="LAT_GAGE" index="10"/>
+        <alias name="" field="LNG_GAGE" index="11"/>
+        <alias name="" field="STATE" index="12"/>
+        <alias name="" field="HCDN_2009" index="13"/>
+        <alias name="" field="ACTIVE09" index="14"/>
+        <alias name="" field="FLYRS1900" index="15"/>
+        <alias name="" field="FLYRS1950" index="16"/>
+        <alias name="" field="FLYRS1990" index="17"/>
+        <alias name="" field="watersheds_OBJECTID" index="18"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="AREA" expression=""/>
+        <default applyOnUpdate="0" field="PERIMETER" expression=""/>
+        <default applyOnUpdate="0" field="GAGE_ID" expression=""/>
+        <default applyOnUpdate="0" field="FID_1" expression=""/>
+        <default applyOnUpdate="0" field="STAID" expression=""/>
+        <default applyOnUpdate="0" field="STANAME" expression=""/>
+        <default applyOnUpdate="0" field="CLASS" expression=""/>
+        <default applyOnUpdate="0" field="AGGECOREGI" expression=""/>
+        <default applyOnUpdate="0" field="DRAIN_SQKM" expression=""/>
+        <default applyOnUpdate="0" field="HUC02" expression=""/>
+        <default applyOnUpdate="0" field="LAT_GAGE" expression=""/>
+        <default applyOnUpdate="0" field="LNG_GAGE" expression=""/>
+        <default applyOnUpdate="0" field="STATE" expression=""/>
+        <default applyOnUpdate="0" field="HCDN_2009" expression=""/>
+        <default applyOnUpdate="0" field="ACTIVE09" expression=""/>
+        <default applyOnUpdate="0" field="FLYRS1900" expression=""/>
+        <default applyOnUpdate="0" field="FLYRS1950" expression=""/>
+        <default applyOnUpdate="0" field="FLYRS1990" expression=""/>
+        <default applyOnUpdate="0" field="watersheds_OBJECTID" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="AREA" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="PERIMETER" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="GAGE_ID" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="FID_1" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="STAID" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="STANAME" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="CLASS" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="AGGECOREGI" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="DRAIN_SQKM" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="HUC02" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="LAT_GAGE" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="LNG_GAGE" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="STATE" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="HCDN_2009" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="ACTIVE09" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="FLYRS1900" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="FLYRS1950" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="FLYRS1990" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="watersheds_OBJECTID" constraints="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="AREA" desc="" exp=""/>
+        <constraint field="PERIMETER" desc="" exp=""/>
+        <constraint field="GAGE_ID" desc="" exp=""/>
+        <constraint field="FID_1" desc="" exp=""/>
+        <constraint field="STAID" desc="" exp=""/>
+        <constraint field="STANAME" desc="" exp=""/>
+        <constraint field="CLASS" desc="" exp=""/>
+        <constraint field="AGGECOREGI" desc="" exp=""/>
+        <constraint field="DRAIN_SQKM" desc="" exp=""/>
+        <constraint field="HUC02" desc="" exp=""/>
+        <constraint field="LAT_GAGE" desc="" exp=""/>
+        <constraint field="LNG_GAGE" desc="" exp=""/>
+        <constraint field="STATE" desc="" exp=""/>
+        <constraint field="HCDN_2009" desc="" exp=""/>
+        <constraint field="ACTIVE09" desc="" exp=""/>
+        <constraint field="FLYRS1900" desc="" exp=""/>
+        <constraint field="FLYRS1950" desc="" exp=""/>
+        <constraint field="FLYRS1990" desc="" exp=""/>
+        <constraint field="watersheds_OBJECTID" desc="" exp=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column width="-1" type="field" name="AREA" hidden="0"/>
+          <column width="-1" type="field" name="PERIMETER" hidden="0"/>
+          <column width="-1" type="field" name="GAGE_ID" hidden="0"/>
+          <column width="-1" type="field" name="FID_1" hidden="0"/>
+          <column width="-1" type="field" name="STAID" hidden="0"/>
+          <column width="-1" type="field" name="STANAME" hidden="0"/>
+          <column width="-1" type="field" name="CLASS" hidden="0"/>
+          <column width="-1" type="field" name="AGGECOREGI" hidden="0"/>
+          <column width="-1" type="field" name="DRAIN_SQKM" hidden="0"/>
+          <column width="-1" type="field" name="HUC02" hidden="0"/>
+          <column width="-1" type="field" name="LAT_GAGE" hidden="0"/>
+          <column width="-1" type="field" name="LNG_GAGE" hidden="0"/>
+          <column width="-1" type="field" name="STATE" hidden="0"/>
+          <column width="-1" type="field" name="HCDN_2009" hidden="0"/>
+          <column width="-1" type="field" name="ACTIVE09" hidden="0"/>
+          <column width="-1" type="field" name="FLYRS1900" hidden="0"/>
+          <column width="-1" type="field" name="FLYRS1950" hidden="0"/>
+          <column width="-1" type="field" name="FLYRS1990" hidden="0"/>
+          <column width="-1" type="field" name="watersheds_OBJECTID" hidden="0"/>
+          <column width="-1" type="actions" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field name="ACTIVE09" editable="1"/>
+        <field name="AGGECOREGI" editable="1"/>
+        <field name="AREA" editable="1"/>
+        <field name="CLASS" editable="1"/>
+        <field name="DRAIN_SQKM" editable="1"/>
+        <field name="FID_1" editable="1"/>
+        <field name="FLYRS1900" editable="1"/>
+        <field name="FLYRS1950" editable="1"/>
+        <field name="FLYRS1990" editable="1"/>
+        <field name="GAGE_ID" editable="1"/>
+        <field name="HCDN_2009" editable="1"/>
+        <field name="HUC02" editable="1"/>
+        <field name="LAT_GAGE" editable="1"/>
+        <field name="LNG_GAGE" editable="1"/>
+        <field name="PERIMETER" editable="1"/>
+        <field name="STAID" editable="1"/>
+        <field name="STANAME" editable="1"/>
+        <field name="STATE" editable="1"/>
+        <field name="watersheds_OBJECTID" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field name="ACTIVE09" labelOnTop="0"/>
+        <field name="AGGECOREGI" labelOnTop="0"/>
+        <field name="AREA" labelOnTop="0"/>
+        <field name="CLASS" labelOnTop="0"/>
+        <field name="DRAIN_SQKM" labelOnTop="0"/>
+        <field name="FID_1" labelOnTop="0"/>
+        <field name="FLYRS1900" labelOnTop="0"/>
+        <field name="FLYRS1950" labelOnTop="0"/>
+        <field name="FLYRS1990" labelOnTop="0"/>
+        <field name="GAGE_ID" labelOnTop="0"/>
+        <field name="HCDN_2009" labelOnTop="0"/>
+        <field name="HUC02" labelOnTop="0"/>
+        <field name="LAT_GAGE" labelOnTop="0"/>
+        <field name="LNG_GAGE" labelOnTop="0"/>
+        <field name="PERIMETER" labelOnTop="0"/>
+        <field name="STAID" labelOnTop="0"/>
+        <field name="STANAME" labelOnTop="0"/>
+        <field name="STATE" labelOnTop="0"/>
+        <field name="watersheds_OBJECTID" labelOnTop="0"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>GAGE_ID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer type="vector" labelsEnabled="0" simplifyMaxScale="1" readOnly="0" refreshOnNotifyMessage="" simplifyDrawingTol="1" autoRefreshTime="0" geometry="Point" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" maxScale="0" minScale="1e+8" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" autoRefreshEnabled="0" simplifyDrawingHints="0">
+      <extent>
+        <xmin>-120.32398120000000574</xmin>
+        <ymin>38.76361817000000087</ymin>
+        <xmax>-120.32398120000000574</xmax>
+        <ymax>38.76361817000000087</ymax>
+      </extent>
+      <id>output_392ea97e_d350_4136_8f89_ea7e373a048c</id>
+      <datasource>memory?geometry=Point&amp;crs=EPSG:4326&amp;field=OBJECTID:integer(-1,0)&amp;field=Shape:string(255,0)&amp;field=source_name:string(255,0)&amp;field=source_link:string(255,0)&amp;field=event_id:integer(-1,0)&amp;field=event_date:string(255,0)&amp;field=event_time:string(255,0)&amp;field=event_title:string(255,0)&amp;field=event_description:string(255,0)&amp;field=location_description:string(255,0)&amp;field=location_accuracy:string(255,0)&amp;field=landslide_category:string(255,0)&amp;field=landslide_trigger:string(255,0)&amp;field=landslide_size:string(255,0)&amp;field=landslide_setting:string(255,0)&amp;field=fatality_count:integer(-1,0)&amp;field=injury_count:integer(-1,0)&amp;field=storm_name:string(255,0)&amp;field=photo_link:string(255,0)&amp;field=comments:string(255,0)&amp;field=event_import_source:string(255,0)&amp;field=event_import_id:string(255,0)&amp;field=latitude:double(20,5)&amp;field=longitude:double(20,5)&amp;field=country_name:string(255,0)&amp;field=country_code:string(255,0)&amp;field=admin_division_name:string(255,0)&amp;field=gazetteer_closest_point:string(255,0)&amp;field=gazetteer_distance:double(20,5)&amp;field=submitted_date:string(255,0)&amp;field=last_edited_date:string(255,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>390230_glc</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial maxz="0" minx="0" crs="" maxx="0" minz="0" dimensions="2" miny="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" forceraster="0" enableorderby="0" symbollevels="0">
+        <symbols>
+          <symbol type="marker" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" enabled="1" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="0,0,0,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>OBJECTID</value>
+        </property>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory lineSizeScale="3x:0,0,0,0,0,0" backgroundAlpha="255" scaleDependency="Area" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" enabled="0" barWidth="5" sizeType="MM" minScaleDenominator="0" penColor="#000000" rotationOffset="270" penAlpha="255" diagramOrientation="Up" height="15" scaleBasedVisibility="0" penWidth="0" labelPlacementMethod="XHeight" maxScaleDenominator="1e+8" minimumSize="0" opacity="1" width="15">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings priority="0" zIndex="0" obstacle="0" showAll="1" placement="0" dist="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" name="name" value=""/>
+            <Option name="properties"/>
+            <Option type="QString" name="type" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="OBJECTID">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Shape">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="source_name">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="source_link">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_id">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_time">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_title">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_description">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="location_description">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="location_accuracy">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslide_category">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslide_trigger">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslide_size">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslide_setting">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="fatality_count">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="injury_count">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="storm_name">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="photo_link">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="comments">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_import_source">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_import_id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="latitude">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="longitude">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="country_name">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="country_code">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="admin_division_name">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gazetteer_closest_point">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gazetteer_distance">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="submitted_date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="last_edited_date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias name="" field="OBJECTID" index="0"/>
+        <alias name="" field="Shape" index="1"/>
+        <alias name="" field="source_name" index="2"/>
+        <alias name="" field="source_link" index="3"/>
+        <alias name="" field="event_id" index="4"/>
+        <alias name="" field="event_date" index="5"/>
+        <alias name="" field="event_time" index="6"/>
+        <alias name="" field="event_title" index="7"/>
+        <alias name="" field="event_description" index="8"/>
+        <alias name="" field="location_description" index="9"/>
+        <alias name="" field="location_accuracy" index="10"/>
+        <alias name="" field="landslide_category" index="11"/>
+        <alias name="" field="landslide_trigger" index="12"/>
+        <alias name="" field="landslide_size" index="13"/>
+        <alias name="" field="landslide_setting" index="14"/>
+        <alias name="" field="fatality_count" index="15"/>
+        <alias name="" field="injury_count" index="16"/>
+        <alias name="" field="storm_name" index="17"/>
+        <alias name="" field="photo_link" index="18"/>
+        <alias name="" field="comments" index="19"/>
+        <alias name="" field="event_import_source" index="20"/>
+        <alias name="" field="event_import_id" index="21"/>
+        <alias name="" field="latitude" index="22"/>
+        <alias name="" field="longitude" index="23"/>
+        <alias name="" field="country_name" index="24"/>
+        <alias name="" field="country_code" index="25"/>
+        <alias name="" field="admin_division_name" index="26"/>
+        <alias name="" field="gazetteer_closest_point" index="27"/>
+        <alias name="" field="gazetteer_distance" index="28"/>
+        <alias name="" field="submitted_date" index="29"/>
+        <alias name="" field="last_edited_date" index="30"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="OBJECTID" expression=""/>
+        <default applyOnUpdate="0" field="Shape" expression=""/>
+        <default applyOnUpdate="0" field="source_name" expression=""/>
+        <default applyOnUpdate="0" field="source_link" expression=""/>
+        <default applyOnUpdate="0" field="event_id" expression=""/>
+        <default applyOnUpdate="0" field="event_date" expression=""/>
+        <default applyOnUpdate="0" field="event_time" expression=""/>
+        <default applyOnUpdate="0" field="event_title" expression=""/>
+        <default applyOnUpdate="0" field="event_description" expression=""/>
+        <default applyOnUpdate="0" field="location_description" expression=""/>
+        <default applyOnUpdate="0" field="location_accuracy" expression=""/>
+        <default applyOnUpdate="0" field="landslide_category" expression=""/>
+        <default applyOnUpdate="0" field="landslide_trigger" expression=""/>
+        <default applyOnUpdate="0" field="landslide_size" expression=""/>
+        <default applyOnUpdate="0" field="landslide_setting" expression=""/>
+        <default applyOnUpdate="0" field="fatality_count" expression=""/>
+        <default applyOnUpdate="0" field="injury_count" expression=""/>
+        <default applyOnUpdate="0" field="storm_name" expression=""/>
+        <default applyOnUpdate="0" field="photo_link" expression=""/>
+        <default applyOnUpdate="0" field="comments" expression=""/>
+        <default applyOnUpdate="0" field="event_import_source" expression=""/>
+        <default applyOnUpdate="0" field="event_import_id" expression=""/>
+        <default applyOnUpdate="0" field="latitude" expression=""/>
+        <default applyOnUpdate="0" field="longitude" expression=""/>
+        <default applyOnUpdate="0" field="country_name" expression=""/>
+        <default applyOnUpdate="0" field="country_code" expression=""/>
+        <default applyOnUpdate="0" field="admin_division_name" expression=""/>
+        <default applyOnUpdate="0" field="gazetteer_closest_point" expression=""/>
+        <default applyOnUpdate="0" field="gazetteer_distance" expression=""/>
+        <default applyOnUpdate="0" field="submitted_date" expression=""/>
+        <default applyOnUpdate="0" field="last_edited_date" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="OBJECTID" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="Shape" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="source_name" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="source_link" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_id" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_date" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_time" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_title" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_description" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="location_description" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="location_accuracy" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslide_category" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslide_trigger" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslide_size" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslide_setting" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="fatality_count" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="injury_count" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="storm_name" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="photo_link" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="comments" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_import_source" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_import_id" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="latitude" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="longitude" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="country_name" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="country_code" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="admin_division_name" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="gazetteer_closest_point" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="gazetteer_distance" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="submitted_date" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="last_edited_date" constraints="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="OBJECTID" desc="" exp=""/>
+        <constraint field="Shape" desc="" exp=""/>
+        <constraint field="source_name" desc="" exp=""/>
+        <constraint field="source_link" desc="" exp=""/>
+        <constraint field="event_id" desc="" exp=""/>
+        <constraint field="event_date" desc="" exp=""/>
+        <constraint field="event_time" desc="" exp=""/>
+        <constraint field="event_title" desc="" exp=""/>
+        <constraint field="event_description" desc="" exp=""/>
+        <constraint field="location_description" desc="" exp=""/>
+        <constraint field="location_accuracy" desc="" exp=""/>
+        <constraint field="landslide_category" desc="" exp=""/>
+        <constraint field="landslide_trigger" desc="" exp=""/>
+        <constraint field="landslide_size" desc="" exp=""/>
+        <constraint field="landslide_setting" desc="" exp=""/>
+        <constraint field="fatality_count" desc="" exp=""/>
+        <constraint field="injury_count" desc="" exp=""/>
+        <constraint field="storm_name" desc="" exp=""/>
+        <constraint field="photo_link" desc="" exp=""/>
+        <constraint field="comments" desc="" exp=""/>
+        <constraint field="event_import_source" desc="" exp=""/>
+        <constraint field="event_import_id" desc="" exp=""/>
+        <constraint field="latitude" desc="" exp=""/>
+        <constraint field="longitude" desc="" exp=""/>
+        <constraint field="country_name" desc="" exp=""/>
+        <constraint field="country_code" desc="" exp=""/>
+        <constraint field="admin_division_name" desc="" exp=""/>
+        <constraint field="gazetteer_closest_point" desc="" exp=""/>
+        <constraint field="gazetteer_distance" desc="" exp=""/>
+        <constraint field="submitted_date" desc="" exp=""/>
+        <constraint field="last_edited_date" desc="" exp=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column width="-1" type="field" name="OBJECTID" hidden="0"/>
+          <column width="-1" type="field" name="Shape" hidden="0"/>
+          <column width="-1" type="field" name="source_name" hidden="0"/>
+          <column width="-1" type="field" name="source_link" hidden="0"/>
+          <column width="-1" type="field" name="event_id" hidden="0"/>
+          <column width="-1" type="field" name="event_date" hidden="0"/>
+          <column width="-1" type="field" name="event_time" hidden="0"/>
+          <column width="-1" type="field" name="event_title" hidden="0"/>
+          <column width="-1" type="field" name="event_description" hidden="0"/>
+          <column width="-1" type="field" name="location_description" hidden="0"/>
+          <column width="-1" type="field" name="location_accuracy" hidden="0"/>
+          <column width="-1" type="field" name="landslide_category" hidden="0"/>
+          <column width="-1" type="field" name="landslide_trigger" hidden="0"/>
+          <column width="-1" type="field" name="landslide_size" hidden="0"/>
+          <column width="-1" type="field" name="landslide_setting" hidden="0"/>
+          <column width="-1" type="field" name="fatality_count" hidden="0"/>
+          <column width="-1" type="field" name="injury_count" hidden="0"/>
+          <column width="-1" type="field" name="storm_name" hidden="0"/>
+          <column width="-1" type="field" name="photo_link" hidden="0"/>
+          <column width="-1" type="field" name="comments" hidden="0"/>
+          <column width="-1" type="field" name="event_import_source" hidden="0"/>
+          <column width="-1" type="field" name="event_import_id" hidden="0"/>
+          <column width="-1" type="field" name="latitude" hidden="0"/>
+          <column width="-1" type="field" name="longitude" hidden="0"/>
+          <column width="-1" type="field" name="country_name" hidden="0"/>
+          <column width="-1" type="field" name="country_code" hidden="0"/>
+          <column width="-1" type="field" name="admin_division_name" hidden="0"/>
+          <column width="-1" type="field" name="gazetteer_closest_point" hidden="0"/>
+          <column width="-1" type="field" name="gazetteer_distance" hidden="0"/>
+          <column width="-1" type="field" name="submitted_date" hidden="0"/>
+          <column width="-1" type="field" name="last_edited_date" hidden="0"/>
+          <column width="-1" type="actions" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field name="OBJECTID" editable="1"/>
+        <field name="Shape" editable="1"/>
+        <field name="admin_division_name" editable="1"/>
+        <field name="comments" editable="1"/>
+        <field name="country_code" editable="1"/>
+        <field name="country_name" editable="1"/>
+        <field name="event_date" editable="1"/>
+        <field name="event_description" editable="1"/>
+        <field name="event_id" editable="1"/>
+        <field name="event_import_id" editable="1"/>
+        <field name="event_import_source" editable="1"/>
+        <field name="event_time" editable="1"/>
+        <field name="event_title" editable="1"/>
+        <field name="fatality_count" editable="1"/>
+        <field name="gazetteer_closest_point" editable="1"/>
+        <field name="gazetteer_distance" editable="1"/>
+        <field name="injury_count" editable="1"/>
+        <field name="landslide_category" editable="1"/>
+        <field name="landslide_setting" editable="1"/>
+        <field name="landslide_size" editable="1"/>
+        <field name="landslide_trigger" editable="1"/>
+        <field name="last_edited_date" editable="1"/>
+        <field name="latitude" editable="1"/>
+        <field name="location_accuracy" editable="1"/>
+        <field name="location_description" editable="1"/>
+        <field name="longitude" editable="1"/>
+        <field name="photo_link" editable="1"/>
+        <field name="source_link" editable="1"/>
+        <field name="source_name" editable="1"/>
+        <field name="storm_name" editable="1"/>
+        <field name="submitted_date" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field name="OBJECTID" labelOnTop="0"/>
+        <field name="Shape" labelOnTop="0"/>
+        <field name="admin_division_name" labelOnTop="0"/>
+        <field name="comments" labelOnTop="0"/>
+        <field name="country_code" labelOnTop="0"/>
+        <field name="country_name" labelOnTop="0"/>
+        <field name="event_date" labelOnTop="0"/>
+        <field name="event_description" labelOnTop="0"/>
+        <field name="event_id" labelOnTop="0"/>
+        <field name="event_import_id" labelOnTop="0"/>
+        <field name="event_import_source" labelOnTop="0"/>
+        <field name="event_time" labelOnTop="0"/>
+        <field name="event_title" labelOnTop="0"/>
+        <field name="fatality_count" labelOnTop="0"/>
+        <field name="gazetteer_closest_point" labelOnTop="0"/>
+        <field name="gazetteer_distance" labelOnTop="0"/>
+        <field name="injury_count" labelOnTop="0"/>
+        <field name="landslide_category" labelOnTop="0"/>
+        <field name="landslide_setting" labelOnTop="0"/>
+        <field name="landslide_size" labelOnTop="0"/>
+        <field name="landslide_trigger" labelOnTop="0"/>
+        <field name="last_edited_date" labelOnTop="0"/>
+        <field name="latitude" labelOnTop="0"/>
+        <field name="location_accuracy" labelOnTop="0"/>
+        <field name="location_description" labelOnTop="0"/>
+        <field name="longitude" labelOnTop="0"/>
+        <field name="photo_link" labelOnTop="0"/>
+        <field name="source_link" labelOnTop="0"/>
+        <field name="source_name" labelOnTop="0"/>
+        <field name="storm_name" labelOnTop="0"/>
+        <field name="submitted_date" labelOnTop="0"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>OBJECTID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer type="vector" labelsEnabled="0" simplifyMaxScale="1" readOnly="0" refreshOnNotifyMessage="" simplifyDrawingTol="1" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" maxScale="0" minScale="1e+8" refreshOnNotifyEnabled="0" simplifyAlgorithm="0" autoRefreshEnabled="0" simplifyDrawingHints="1">
+      <extent>
+        <xmin>-120.3739812000000029</xmin>
+        <ymin>38.71361817000000372</ymin>
+        <xmax>-120.27398120000000858</xmax>
+        <ymax>38.81361816999999803</ymax>
+      </extent>
+      <id>output_995ab97d_38c5_466a_ad78_3caeaef93521</id>
+      <datasource>memory?geometry=Polygon&amp;crs=EPSG:4326&amp;field=OBJECTID:int8(10,0)&amp;field=Shape:string(254,0)&amp;field=source_nam:string(254,0)&amp;field=source_lin:string(254,0)&amp;field=event_id:int8(10,0)&amp;field=event_date:string(254,0)&amp;field=event_time:string(254,0)&amp;field=event_titl:string(254,0)&amp;field=event_desc:string(254,0)&amp;field=location_d:string(254,0)&amp;field=location_a:string(254,0)&amp;field=landslide_:string(254,0)&amp;field=landslid_1:string(254,0)&amp;field=landslid_2:string(254,0)&amp;field=landslid_3:string(254,0)&amp;field=fatality_c:int8(10,0)&amp;field=injury_cou:int8(10,0)&amp;field=storm_name:string(254,0)&amp;field=photo_link:string(254,0)&amp;field=comments:string(254,0)&amp;field=event_impo:string(254,0)&amp;field=event_im_1:string(254,0)&amp;field=latitude:double(20,5)&amp;field=longitude:double(20,5)&amp;field=country_na:string(254,0)&amp;field=country_co:string(254,0)&amp;field=admin_divi:string(254,0)&amp;field=gazetteer_:string(254,0)&amp;field=gazettee_1:double(20,5)&amp;field=submitted_:string(254,0)&amp;field=last_edite:string(254,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>output</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial maxz="0" minx="0" crs="" maxx="0" minz="0" dimensions="2" miny="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" forceraster="0" enableorderby="0" symbollevels="0">
+        <symbols>
+          <symbol type="fill" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" enabled="1" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="31,120,180,159"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0.00000000000000006,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.86"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory lineSizeScale="3x:0,0,0,0,0,0" backgroundAlpha="255" scaleDependency="Area" backgroundColor="#ffffff" sizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" enabled="0" barWidth="5" sizeType="MM" minScaleDenominator="0" penColor="#000000" rotationOffset="270" penAlpha="255" diagramOrientation="Up" height="15" scaleBasedVisibility="0" penWidth="0" labelPlacementMethod="XHeight" maxScaleDenominator="1e+8" minimumSize="0" opacity="1" width="15">
+          <fontProperties style="" description=".SF NS Text,13,-1,5,50,0,0,0,0,0"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings priority="0" zIndex="0" obstacle="0" showAll="1" placement="0" dist="0" linePlacementFlags="18">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" name="name" value=""/>
+            <Option name="properties"/>
+            <Option type="QString" name="type" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="OBJECTID">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Shape">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="source_nam">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="source_lin">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_time">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_titl">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_desc">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="location_d">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="location_a">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslide_">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslid_1">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslid_2">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="landslid_3">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="fatality_c">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="injury_cou">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="storm_name">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="photo_link">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="comments">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_impo">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="event_im_1">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="latitude">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="longitude">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="country_na">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="country_co">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="admin_divi">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gazetteer_">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gazettee_1">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="submitted_">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="last_edite">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias name="" field="OBJECTID" index="0"/>
+        <alias name="" field="Shape" index="1"/>
+        <alias name="" field="source_nam" index="2"/>
+        <alias name="" field="source_lin" index="3"/>
+        <alias name="" field="event_id" index="4"/>
+        <alias name="" field="event_date" index="5"/>
+        <alias name="" field="event_time" index="6"/>
+        <alias name="" field="event_titl" index="7"/>
+        <alias name="" field="event_desc" index="8"/>
+        <alias name="" field="location_d" index="9"/>
+        <alias name="" field="location_a" index="10"/>
+        <alias name="" field="landslide_" index="11"/>
+        <alias name="" field="landslid_1" index="12"/>
+        <alias name="" field="landslid_2" index="13"/>
+        <alias name="" field="landslid_3" index="14"/>
+        <alias name="" field="fatality_c" index="15"/>
+        <alias name="" field="injury_cou" index="16"/>
+        <alias name="" field="storm_name" index="17"/>
+        <alias name="" field="photo_link" index="18"/>
+        <alias name="" field="comments" index="19"/>
+        <alias name="" field="event_impo" index="20"/>
+        <alias name="" field="event_im_1" index="21"/>
+        <alias name="" field="latitude" index="22"/>
+        <alias name="" field="longitude" index="23"/>
+        <alias name="" field="country_na" index="24"/>
+        <alias name="" field="country_co" index="25"/>
+        <alias name="" field="admin_divi" index="26"/>
+        <alias name="" field="gazetteer_" index="27"/>
+        <alias name="" field="gazettee_1" index="28"/>
+        <alias name="" field="submitted_" index="29"/>
+        <alias name="" field="last_edite" index="30"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="OBJECTID" expression=""/>
+        <default applyOnUpdate="0" field="Shape" expression=""/>
+        <default applyOnUpdate="0" field="source_nam" expression=""/>
+        <default applyOnUpdate="0" field="source_lin" expression=""/>
+        <default applyOnUpdate="0" field="event_id" expression=""/>
+        <default applyOnUpdate="0" field="event_date" expression=""/>
+        <default applyOnUpdate="0" field="event_time" expression=""/>
+        <default applyOnUpdate="0" field="event_titl" expression=""/>
+        <default applyOnUpdate="0" field="event_desc" expression=""/>
+        <default applyOnUpdate="0" field="location_d" expression=""/>
+        <default applyOnUpdate="0" field="location_a" expression=""/>
+        <default applyOnUpdate="0" field="landslide_" expression=""/>
+        <default applyOnUpdate="0" field="landslid_1" expression=""/>
+        <default applyOnUpdate="0" field="landslid_2" expression=""/>
+        <default applyOnUpdate="0" field="landslid_3" expression=""/>
+        <default applyOnUpdate="0" field="fatality_c" expression=""/>
+        <default applyOnUpdate="0" field="injury_cou" expression=""/>
+        <default applyOnUpdate="0" field="storm_name" expression=""/>
+        <default applyOnUpdate="0" field="photo_link" expression=""/>
+        <default applyOnUpdate="0" field="comments" expression=""/>
+        <default applyOnUpdate="0" field="event_impo" expression=""/>
+        <default applyOnUpdate="0" field="event_im_1" expression=""/>
+        <default applyOnUpdate="0" field="latitude" expression=""/>
+        <default applyOnUpdate="0" field="longitude" expression=""/>
+        <default applyOnUpdate="0" field="country_na" expression=""/>
+        <default applyOnUpdate="0" field="country_co" expression=""/>
+        <default applyOnUpdate="0" field="admin_divi" expression=""/>
+        <default applyOnUpdate="0" field="gazetteer_" expression=""/>
+        <default applyOnUpdate="0" field="gazettee_1" expression=""/>
+        <default applyOnUpdate="0" field="submitted_" expression=""/>
+        <default applyOnUpdate="0" field="last_edite" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="OBJECTID" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="Shape" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="source_nam" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="source_lin" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_id" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_date" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_time" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_titl" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_desc" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="location_d" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="location_a" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslide_" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslid_1" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslid_2" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="landslid_3" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="fatality_c" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="injury_cou" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="storm_name" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="photo_link" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="comments" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_impo" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="event_im_1" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="latitude" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="longitude" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="country_na" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="country_co" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="admin_divi" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="gazetteer_" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="gazettee_1" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="submitted_" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="last_edite" constraints="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="OBJECTID" desc="" exp=""/>
+        <constraint field="Shape" desc="" exp=""/>
+        <constraint field="source_nam" desc="" exp=""/>
+        <constraint field="source_lin" desc="" exp=""/>
+        <constraint field="event_id" desc="" exp=""/>
+        <constraint field="event_date" desc="" exp=""/>
+        <constraint field="event_time" desc="" exp=""/>
+        <constraint field="event_titl" desc="" exp=""/>
+        <constraint field="event_desc" desc="" exp=""/>
+        <constraint field="location_d" desc="" exp=""/>
+        <constraint field="location_a" desc="" exp=""/>
+        <constraint field="landslide_" desc="" exp=""/>
+        <constraint field="landslid_1" desc="" exp=""/>
+        <constraint field="landslid_2" desc="" exp=""/>
+        <constraint field="landslid_3" desc="" exp=""/>
+        <constraint field="fatality_c" desc="" exp=""/>
+        <constraint field="injury_cou" desc="" exp=""/>
+        <constraint field="storm_name" desc="" exp=""/>
+        <constraint field="photo_link" desc="" exp=""/>
+        <constraint field="comments" desc="" exp=""/>
+        <constraint field="event_impo" desc="" exp=""/>
+        <constraint field="event_im_1" desc="" exp=""/>
+        <constraint field="latitude" desc="" exp=""/>
+        <constraint field="longitude" desc="" exp=""/>
+        <constraint field="country_na" desc="" exp=""/>
+        <constraint field="country_co" desc="" exp=""/>
+        <constraint field="admin_divi" desc="" exp=""/>
+        <constraint field="gazetteer_" desc="" exp=""/>
+        <constraint field="gazettee_1" desc="" exp=""/>
+        <constraint field="submitted_" desc="" exp=""/>
+        <constraint field="last_edite" desc="" exp=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column width="-1" type="field" name="OBJECTID" hidden="0"/>
+          <column width="-1" type="field" name="Shape" hidden="0"/>
+          <column width="-1" type="field" name="source_nam" hidden="0"/>
+          <column width="-1" type="field" name="source_lin" hidden="0"/>
+          <column width="-1" type="field" name="event_id" hidden="0"/>
+          <column width="-1" type="field" name="event_date" hidden="0"/>
+          <column width="-1" type="field" name="event_time" hidden="0"/>
+          <column width="-1" type="field" name="event_titl" hidden="0"/>
+          <column width="-1" type="field" name="event_desc" hidden="0"/>
+          <column width="-1" type="field" name="location_d" hidden="0"/>
+          <column width="-1" type="field" name="location_a" hidden="0"/>
+          <column width="-1" type="field" name="landslide_" hidden="0"/>
+          <column width="-1" type="field" name="landslid_1" hidden="0"/>
+          <column width="-1" type="field" name="landslid_2" hidden="0"/>
+          <column width="-1" type="field" name="landslid_3" hidden="0"/>
+          <column width="-1" type="field" name="fatality_c" hidden="0"/>
+          <column width="-1" type="field" name="injury_cou" hidden="0"/>
+          <column width="-1" type="field" name="storm_name" hidden="0"/>
+          <column width="-1" type="field" name="photo_link" hidden="0"/>
+          <column width="-1" type="field" name="comments" hidden="0"/>
+          <column width="-1" type="field" name="event_impo" hidden="0"/>
+          <column width="-1" type="field" name="event_im_1" hidden="0"/>
+          <column width="-1" type="field" name="latitude" hidden="0"/>
+          <column width="-1" type="field" name="longitude" hidden="0"/>
+          <column width="-1" type="field" name="country_na" hidden="0"/>
+          <column width="-1" type="field" name="country_co" hidden="0"/>
+          <column width="-1" type="field" name="admin_divi" hidden="0"/>
+          <column width="-1" type="field" name="gazetteer_" hidden="0"/>
+          <column width="-1" type="field" name="gazettee_1" hidden="0"/>
+          <column width="-1" type="field" name="submitted_" hidden="0"/>
+          <column width="-1" type="field" name="last_edite" hidden="0"/>
+          <column width="-1" type="actions" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field name="OBJECTID" editable="1"/>
+        <field name="Shape" editable="1"/>
+        <field name="admin_divi" editable="1"/>
+        <field name="comments" editable="1"/>
+        <field name="country_co" editable="1"/>
+        <field name="country_na" editable="1"/>
+        <field name="event_date" editable="1"/>
+        <field name="event_desc" editable="1"/>
+        <field name="event_id" editable="1"/>
+        <field name="event_im_1" editable="1"/>
+        <field name="event_impo" editable="1"/>
+        <field name="event_time" editable="1"/>
+        <field name="event_titl" editable="1"/>
+        <field name="fatality_c" editable="1"/>
+        <field name="gazettee_1" editable="1"/>
+        <field name="gazetteer_" editable="1"/>
+        <field name="injury_cou" editable="1"/>
+        <field name="landslid_1" editable="1"/>
+        <field name="landslid_2" editable="1"/>
+        <field name="landslid_3" editable="1"/>
+        <field name="landslide_" editable="1"/>
+        <field name="last_edite" editable="1"/>
+        <field name="latitude" editable="1"/>
+        <field name="location_a" editable="1"/>
+        <field name="location_d" editable="1"/>
+        <field name="longitude" editable="1"/>
+        <field name="photo_link" editable="1"/>
+        <field name="source_lin" editable="1"/>
+        <field name="source_nam" editable="1"/>
+        <field name="storm_name" editable="1"/>
+        <field name="submitted_" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field name="OBJECTID" labelOnTop="0"/>
+        <field name="Shape" labelOnTop="0"/>
+        <field name="admin_divi" labelOnTop="0"/>
+        <field name="comments" labelOnTop="0"/>
+        <field name="country_co" labelOnTop="0"/>
+        <field name="country_na" labelOnTop="0"/>
+        <field name="event_date" labelOnTop="0"/>
+        <field name="event_desc" labelOnTop="0"/>
+        <field name="event_id" labelOnTop="0"/>
+        <field name="event_im_1" labelOnTop="0"/>
+        <field name="event_impo" labelOnTop="0"/>
+        <field name="event_time" labelOnTop="0"/>
+        <field name="event_titl" labelOnTop="0"/>
+        <field name="fatality_c" labelOnTop="0"/>
+        <field name="gazettee_1" labelOnTop="0"/>
+        <field name="gazetteer_" labelOnTop="0"/>
+        <field name="injury_cou" labelOnTop="0"/>
+        <field name="landslid_1" labelOnTop="0"/>
+        <field name="landslid_2" labelOnTop="0"/>
+        <field name="landslid_3" labelOnTop="0"/>
+        <field name="landslide_" labelOnTop="0"/>
+        <field name="last_edite" labelOnTop="0"/>
+        <field name="latitude" labelOnTop="0"/>
+        <field name="location_a" labelOnTop="0"/>
+        <field name="location_d" labelOnTop="0"/>
+        <field name="longitude" labelOnTop="0"/>
+        <field name="photo_link" labelOnTop="0"/>
+        <field name="source_lin" labelOnTop="0"/>
+        <field name="source_nam" labelOnTop="0"/>
+        <field name="storm_name" labelOnTop="0"/>
+        <field name="submitted_" labelOnTop="0"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>OBJECTID</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer type="vector" readOnly="0" refreshOnNotifyMessage="" autoRefreshTime="0" geometry="No geometry" hasScaleBasedVisibilityFlag="0" maxScale="0" minScale="1e+8" refreshOnNotifyEnabled="0" autoRefreshEnabled="0">
+      <id>watersheds_be589650_adec_43fe_b9c2_868b952dd3b0</id>
+      <datasource>file:../../../data/processed/watersheds.csv?type=csv&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>watersheds</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties/>
+      <provider encoding="UTF-8">delimitedtext</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <fieldConfiguration>
+        <field name="OBJECTID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="GAGE_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias name="" field="OBJECTID" index="0"/>
+        <alias name="" field="GAGE_ID" index="1"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="OBJECTID" expression=""/>
+        <default applyOnUpdate="0" field="GAGE_ID" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="OBJECTID" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" exp_strength="0" field="GAGE_ID" constraints="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="OBJECTID" desc="" exp=""/>
+        <constraint field="GAGE_ID" desc="" exp=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="output_392ea97e_d350_4136_8f89_ea7e373a048c"/>
+    <layer id="watersheds_be589650_adec_43fe_b9c2_868b952dd3b0"/>
+    <layer id="output_0540a085_3700_4a6e_863c_39d20b728d48"/>
+    <layer id="output_995ab97d_38c5_466a_ad78_3caeaef93521"/>
+  </layerorder>
+  <properties>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WFSTLayers>
+      <Delete type="QStringList"/>
+      <Update type="QStringList"/>
+      <Insert type="QStringList"/>
+    </WFSTLayers>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <Gui>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+    </Gui>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <PAL>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <CandidatesLine type="int">50</CandidatesLine>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <SearchMethod type="int">0</SearchMethod>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+    </PAL>
+    <PositionPrecision>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSUrl type="QString"></WMSUrl>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WFSLayers type="QStringList"/>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WFSUrl type="QString"></WFSUrl>
+    <WCSLayers type="QStringList"/>
+    <DefaultStyles>
+      <Opacity type="double">1</Opacity>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <Fill type="QString"></Fill>
+      <RandomColors type="bool">true</RandomColors>
+      <ColorRamp type="QString"></ColorRamp>
+    </DefaultStyles>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <Annotations/>
+  <Layouts/>
+</qgis>

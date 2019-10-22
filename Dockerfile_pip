@@ -1,0 +1,14 @@
+# Use an official Python runtime as a parent image
+FROM osgeo/gdal:ubuntu-small-latest as gisbuild
+WORKDIR /gis
+RUN apt-get update && apt-get install -y \
+  gdb \
+  libspatialindex-dev \
+  python3-pip \
+  python3-dev \
+  python3-dbg
+COPY requirements.txt /gis
+RUN pip3 install -r requirements.txt
+COPY src /gis/src
+COPY gages_active.txt /gis/data/
+EXPOSE 8786
