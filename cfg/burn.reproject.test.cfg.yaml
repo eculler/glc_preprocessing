@@ -1,0 +1,56 @@
+project_id: modis-burned-area
+log_level: !!python/name:logging.DEBUG
+verbose: true
+base_dir: /lsmutils
+temp_dir: tmp
+
+in:
+  burned-area-merged: !Regex
+    dimensions:
+      - yearmonth
+    dirname: out/global
+    filename_re: 'MCD64A1.A(?P<yearmonth>200[0-4]\d{3}).e.(?P<i>\d+)'
+    filename: 'MCD64A1.A{yearmonth}.e.{i}'
+    default_ext: tif
+
+cases:
+  base: !BaseCase {}
+
+scripts: {}
+
+sequence: !OpSequence
+  operations:
+    - !Operation
+      name: reproject-raster
+      dims:
+        - yearmonth
+      in:
+        input-ds: burned-area-merged
+        srs: 'EPSG:4326'
+        algorithm: 'near'
+        extent: [-19, -60, 180, 70]
+        format: vrt
+      out:
+        reprojected: burned-area-aed
+    - !Operation
+      name: convert-filetype
+      dims:
+        - yearmonth
+      in:
+        input-ds: burned-area-aed
+        filetype: nc
+        compress: DEFLATE
+      out:
+        converted: burned-area-nc
+
+structure: !CaseDirectoryStructure
+  idstr: modis-burn
+  paths:
+    out:
+      aed:
+        burned-area-aed: !DataList
+          filename: MCD64A1.A{yearmonth}.e
+      netcdf:
+        burned-area-nc: !DataList
+          filename: MCD64A1.A{yearmonth}.e
+          variable: BurnDate

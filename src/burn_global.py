@@ -1,97 +1,124 @@
+import geopandas a gpd
 import logging
 import yaml
 import shutil, os, sys
 import Nio
 import numpy as np
-import ogr, osr
+import ogr
 import pandas as pd
 import netCDF4 as nc4
 import xarray as xr
 
-burn_out_fn = 'processed/slide_modisburndate.csv'
-slide_fn = '../data/SLIDE_NASA_GLC/GLC20180821.csv'
-burn_fn = '../data/FIRE_MODIS/MCD64A1.utm{zone}.nc'
+burn_out_fn = 'out/slide_modisburndate.csv'
+data_dir = '/projects/elcu4811/burn.preprocess/data/'
+slide_fn = os.path.join(data_dir, 'SLIDE_NASA_GLC/GLC20180821.csv')
+burn_fn = os.path.join('out/netcdf/MCD64A1.utm.nc')
+
+
+
+def add_month_to_dataset(ds):
+    month = int(os.path.basename(ds.encoding['source'])[9:16])
+    ds.expand_dims({'month': [month]})
+
+def extract_buffer(row):
+    # Find index of closest location
+    loc_i = kdt.query((row.longitude, row.latitude))[1]
+    print('Location index: {}'.format(loc_i))
+    print('Location: {}, {}'.format(row.longitude, row.latitude))
+    print('Closest cell: {}, {}'.format(xv[loc_i], yv[loc_i]))
+    print('Closest index: {}, {}'.format(xi[loc_i], yi[loc_i]))
+
+    # Pull buffer
+    in_radius = row.location_accuracy == 0
+    if in_radius:
+        radius = row.location_accuracy
+        clip_radius = int(np.floor(radius / 500)) # km -> grid
+
+        # Clip
+        event_burn = burn.isel(
+            longitude=slice(xi[loc_i] - (clip_radius + 2),
+                            xi[loc_i] + (clip_radius + 2)),
+            latitude=slice(yi[loc_i] - (clip_radius + 2),
+                           yi[loc_i] + (clip_radius + 2)))
+
+
+        # Find points within radius using flat earth approximation
+        r = 6356
+        event_precip = event_precip.where(
+            ((r * (burn.y  - yv[loc_i]) * np.pi / 180)**2 +
+             (r * (burn.x - xv[loc_i]) * np.pi / 180 * np.cos(burn.y))**2)
+            <= radius**2,
+            drop=True)
+
+        in_radius = (event_burn.sizes['x'] > 1 or
+                     event_burn.sizes['y'] > 1)
+
+        if in_radius:
+            # Calculate total number of grid cells in radius
+            burn_array = event_burn.isel(month=0).Band1
+            total = np.count_nonzero(~np.isnan(burn_array))
+
+    # Get the nearest grid cell if the radius does not include any
+    if not in_radius:
+        event_burn = burn.sel(
+            longitude = xv[loc_i], latitude = yv[loc_i])
+        total = 1.
+
+    event_burn = event_burn.where(event_burn.Band1 >= 1, drop=True)
+    event_burn = event_burn.to_dataframe().dropna(subset=['Band1'])
+
+    # Aggregate
+    event_burn.reset_index(inplace=True)
+    fraction = event_burn.groupby(['month', 'burn_date']).size() / total
+    fraction = fraction.to_frame('fraction')
+
+    # Add location identifier to the index
+    fraction['OBJECTID'] = i
+    fraction = fraction.set_index(['OBJECTID'], append=True)
+    event_dfs.append(fraction)
 
 if __name__ == '__main__':
     if not os.path.exists(os.path.dirname(burn_out_fn)):
         raise FileNotFoundError(
             'Directory does not exist: {}'.format(burn_out_fn))
-    slide = pd.read_csv(slide_fn, index_col='OBJECTID')
-    slide['event_date'] = pd.to_datetime(
-            slide['event_date'], format='%Y/%m/%d %H:%M')
-    slide['event_date'] = slide['event_date'].dt.normalize()
 
-     # Filter Landslides to study area and duration
+    # Load landslide data
+    slide_df = pd.read_csv(slide_fn)
+    slide = gpd.GeoDataFrame(
+        slide_df.drop(['longitude', 'latitude'], axis=1),
+        crs={'init': 'epsg:4326'},
+        geometry = [
+            shapely.geometry.Point(xy)
+            for xy in zip(slide_df.longitude, slide_df.latitude)])
+    slide = slide.loc[slide.geometry.within(bbox.geometry[0])]
+
+     # Filter Landslides to study area
     slide = slide[slide.latitude > -50]
     slide = slide[slide.latitude < 50]
 
-    # Indicate UTM zone in dataframe
-    slide['zone'] = np.where(slide.longitude < - 120., 10, 11)
+    # Open burn dataset
+    files = glob.glob(burn_fn)
+    files.sort()
+    burn = xr.open_mfdataset(
+        files, combine='nested', concat_dim='month', coords='minimal',
+        chunks={'latitude': 50, 'longitude': 50},
+        preprocess = add_month_to_dataset)
 
-    # Define coordinate transformation to match landslide and burn data
-    latlon_sr = osr.SpatialReference()
-    latlon_sr.ImportFromEPSG(4326)
+    # Build KD-Tree
+    xv, yv = np.meshgrid(burn.x.values, burn.y.values)
+    xv = xv.flatten()
+    yv = yv.flatten()
+    xi, yi = np.indices((burn.sizes['x'],
+                         burn.sizes['y']))
+    xi = xi.flatten('F')
+    yi = yi.flatten('F')
+
+    kdt = cKDTree(np.dstack((xv, yv))[0])
 
     event_dfs = []
-    count=1
-    for zone, group in slide.groupby('zone'):
-        utm_sr = osr.SpatialReference()
-        utm_sr.ImportFromEPSG(6329 + zone)
-        latlon_to_utm = osr.CoordinateTransformation(latlon_sr, utm_sr)
 
-        # Open burn dataset
-        burn_ds = xr.open_dataset(burn_fn.format(zone=zone))
-
-        burn_doy = burn_ds.variables['burn_date']
-        burn_month = burn_ds.variables['month']
-        burn_east = burn_ds.variables['x'][:]
-        burn_north = burn_ds.variables['y'][:]
-
-        for i, row in group.iterrows():
-            print(count)
-            count += 1
-
-            month = row['month']
-            year = row['year']
-
-            # Reproject coordinates
-            wkt = 'POINT ({lon} {lat})'.format(lon=row['longitude'],
-                                               lat=row['latitude'])
-            location = ogr.CreateGeometryFromWkt(wkt)
-            location.Transform(latlon_to_utm)
-            slide_x = location.GetX()
-            slide_y = location.GetY()
-
-            if row['location_accuracy'] in ('exact', 'unknown'):
-                event_burn = burn_ds.sel(
-                    x=slide_x, y=slide_y, method='nearest')
-                total = 1.
-            else:
-                level = int(row['location_accuracy'][:-2])
-                radius = level * 1000
-
-                # Pull data
-                event_burn = burn_ds.where(
-                    ((burn_ds.x - slide_x)**2 +
-                     (burn_ds.y - slide_y)**2 <= radius**2),
-                    drop=True)
-
-                # This does not cover edge cases,
-                # but the edges are not close to the study area
-                burn_array = event_burn.isel(month=0).burn_date
-                total = np.count_nonzero(~np.isnan(burn_array))
-
-            event_burn = event_burn.where(event_burn.burn_date >= 1, drop=True)
-            event_burn = event_burn.to_dataframe().dropna(subset=['burn_date'])
-
-            # Aggregate
-            event_burn.reset_index(inplace=True)
-            fraction = event_burn.groupby(['month', 'burn_date']).size() / total
-            fraction = fraction.to_frame('fraction')
-            # Add location identifier to the index
-            fraction['OBJECTID'] = i
-            fraction = fraction.set_index(['OBJECTID'], append=True)
-            event_dfs.append(fraction)
+    pool = multiprocessing.Pool()
+    pool.map(extract_buffer, slide.iterrows())
 
     event_df = pd.concat(event_dfs)
 

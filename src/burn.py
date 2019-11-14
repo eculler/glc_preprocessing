@@ -92,6 +92,7 @@ if __name__ == '__main__':
             event_burn.reset_index(inplace=True)
             fraction = event_burn.groupby(['month', 'burn_date']).size() / total
             fraction = fraction.to_frame('fraction')
+
             # Add location identifier to the index
             fraction['OBJECTID'] = i
             fraction = fraction.set_index(['OBJECTID'], append=True)

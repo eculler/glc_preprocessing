@@ -55,11 +55,8 @@ if __name__ == '__main__':
             print('Selecting location {}'.format(count))
             count += 1
 
-
             # Find index of closest location
             loc_i = kdt.query((row.longitude, row.latitude))[1]
-            #loc_i = 14086961 # 1
-            #loc_i = 13834940 # 4
             print('Location index: {}'.format(loc_i))
             print('Location: {}, {}'.format(row.longitude, row.latitude))
             print('Closest cell: {}, {}'.format(xv[loc_i], yv[loc_i]))
